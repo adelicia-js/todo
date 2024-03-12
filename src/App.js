@@ -2,6 +2,7 @@
 
 import "./App.css";
 import { useState } from "react";
+import React from 'react';
 // useState is a React hook that takes a state's initial value and returns an array with 2 values,
 // i.e., a getter and setter function
 
@@ -38,6 +39,7 @@ const TodoInput = ({ todo, setTodo, addTodo, setTodos, todos }) => {
   );
 };
 
+
 const TodoList = ({ todoList, removeTodo }) => {
   return (
     <div className="input-list">
@@ -64,19 +66,28 @@ const TodoList = ({ todoList, removeTodo }) => {
 
 const Footer = () => {
   return (
-    <>
-        <p className="love">
-        Made with 💖
-        </p>
-        <p className="socials"> 
-          <a href="https://github.com/adelicia-js" rel="noreferrer" target="_blank"><VscGithub size={25}/></a>
-          <a href="https://www.linkedin.com/in/adelicia/" rel="noreferrer" target="_blank"><SiLinkedin size={25}/></a>
-        </p>
-        <p>
-            <a href="https://github.com/adelicia-js/todo-cra" rel="noreferrer" target="_blank" className="source">$Source | 2023 - 2024</a> 
-        </p> 
-        
-    </>
+    <footer className="footer">
+      <p className="love">Made with 💖</p>
+      <div className="socials">
+        <a href="https://github.com/adelicia-js" rel="noreferrer" target="_blank"><VscGithub size={25} /></a>
+        <a href="https://www.linkedin.com/in/adelicia/" rel="noreferrer" target="_blank"><SiLinkedin size={25} /></a>
+      </div>
+      <ApiGatewayButton />
+      <p className="source">
+        <a href="https://github.com/adelicia-js/todo-cra" rel="noreferrer" target="_blank">$Source | 2023 - 2024</a>
+      </p>
+    </footer>
+  );
+};
+
+//Api gateway button on frontend logic
+const ApiGatewayButton = () => {
+  const apiGatewayUrl = process.env.REACT_APP_API_URL;
+
+  return (
+    <button className="api-gateway-button" onClick={() => window.open(apiGatewayUrl, '_blank')}>
+      Open API Gateway
+    </button>
   );
 };
 

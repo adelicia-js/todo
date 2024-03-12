@@ -200,3 +200,20 @@ h1 {
     padding-left: 0.3rem;
   }
 }
+
+.api-gateway-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.api-gateway-button:hover {
+  background-color: #0056b3;
+}
