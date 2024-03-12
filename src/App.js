@@ -91,6 +91,8 @@ const ApiGatewayButton = () => {
   );
 };
 
+console.log('API Gateway URL:', process.env.REACT_APP_API_URL);
+
 const App = () => {
   // Create a todo
   const [todo, setTodo] = useState("");
