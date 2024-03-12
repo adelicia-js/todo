@@ -86,7 +86,7 @@ const ApiGatewayButton = () => {
 
   return (
     <button className="api-gateway-button" onClick={() => window.open(apiGatewayUrl, '_blank')}>
-      Open API Gateway
+      Invoke API Gateway
     </button>
   );
 };
