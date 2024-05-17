@@ -20,3 +20,4 @@ Type this into your terminal
     npm start
     
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My name is Guravaiah and I'm here to learn about this technology.Can I have access to requests to your code.
